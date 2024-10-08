@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000000;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff6347; /* Tomato color on hover */
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+
+.navb {
+    display: flex;
+    
+    justify-content: space-between;
+    text-decoration: black;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #34acc1;
+}
+
+.logo h2 {
+    color: rgb(4, 0, 0) ;
+    text-decoration: solid;
+    font-size: 24px;
+   
+}
+
+.aman {
+    
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.aman li a {
+    text-decoration: none;
+    color: rgb(18, 17, 17);
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #b8ff47;
+    text-decoration: underline;
+}
+
+.menu-btn {
+    display: none; /* Hidden by default on larger screens */
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active class is toggled */
+    }
+
+    .menu-btn {
+        display: block; /* Show the menu button on smaller screens */
+    }
+}
+
+.open-popup-btn,
+.open-popup-btn *,
+.open-popup-btn :after,
+.open-popup-btn :before,
+.open-popup-btn:after,
+.open-popup-btn:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.open-popup-btn {
+   
+        -webkit-tap-highlight-color: 
+      transparent;
+        -webkit-appearance: button;
+        background-color: 
+      #000;
+        background-image: none;
+        color: 
+      #fff;
+        cursor: pointer;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+          Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        font-size: 100%;
+        line-height: 1.5;
+        margin: 0;
+        -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+        padding: 0;
+      }
+      .open-popup-btn:disabled {
+        cursor: default;
+      }
+      .open-popup-btn:-moz-focusring {
+        outline: auto;
+      }
+      .open-popup-btnsvg {
+        display: block;
+        vertical-align: middle;
+      }
+      .open-popup-btn [hidden] {
+        display: none;
+      }
+      .open-popup-btn {
+        background: 
+      #fff;
+        border: 1px solid;
+        border-radius: 999px;
+        box-sizing: border-box;
+        color: 
+      #000;
+        display: block;
+        font-weight: 900;
+        -webkit-mask-image: none;
+        overflow: hidden;
+        padding: 1.2rem 3rem;
+        position: relative;
+        text-transform: uppercase;
+        transition: 0.2s;
+      }
+      .open-popup-btn:hover {
+        box-shadow: 0 6px 0 -4px 
+      #fff, 0 9px 0 -4px 
+      #aaa, 0 12px 0 -4px 
+      #000;
+        transform: translateY(-5px);
+      }
+
+
+
+.open-popup-btn:hover {
+    background-color: #6a1b9e;
+}
+
+/* The popup (hidden by default) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup content */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Style for the Close button */
+.close-popup-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.close-popup-btn:hover {
+    background-color: #ff6347;
+}
+
+
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 830px;
+    height: 1000px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 20px;
+    text-align: left;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-align: left;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="month"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #ff6347;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #f4f007;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #f9c109;
+}
+
+
+.slider {
+    width: 100%px;
+height: 1000px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Wrapper for slides */
+.slides {
+    display: flex;
+    width: 400%;  /* 4 slides, so width is 4 times */
+    height: 100%;
+    animation: slide 16s infinite;  /* 4 images x 4s each = 16s total */
+}
+
+/* Individual slides */
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.slide img {
+    width: 2000px;
+    height: 1000px;
+    object-fit: cover;
+    
+}
+
+/* Animation keyframes for sliding effect */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    58% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    91% { transform: translateX(-200%); }
+    100% { transform: translateX(-300%); }
+}
+
+/* Hover effect: pauses the animation */
+.slider:hover .slides {
+   transition-duration: 1.3s;
+}
+
+.donation-container {
+    background-color: rgb(255, 244, 244);
+    padding: 40px;
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgba(197, 43, 43, 0.1);
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 20px;
+   
+ position: static;
+    width: 1500px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.donation-buttons {
+    margin-bottom: 20px;
+}
+
+.donation-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donation-btn:hover {
+    background-color: #ff6347;
+}
+
+.custom-donation {
+    margin-bottom: 20px;
+}
+
+.custom-donation input {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #13687b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #cc2fd4;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* Image Section */
+.image-side {
+    flex: 1;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Image box shadow */
+}
+
+/* Content Section */
+.content-side {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .image-side {
+        width: 100%;
+        height: 250px;
+    }
+
+    .content-side {
+        padding: 20px;
+    }
+}
+
+
+.ngo-footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-about, .footer-links, .footer-graph {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-about h3, .footer-links h3, .footer-graph h3 {
+    margin-bottom: 15px;
+    color: #28edc2;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style-type: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Chart styling */
+.footer-graph canvas {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-about, .footer-links, .footer-graph {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
